@@ -133,15 +133,27 @@ document.addEventListener('DOMContentLoaded', () => {
   // 加载当前设置
   loadSettings();
 
+  function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+      const context = this;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+  }
+
   // 监听日期变化
   dateInput.addEventListener('change', () => {
     showVisitData(dateInput.value);
   });
 
   // 监听搜索输入变化
-  searchInput.addEventListener('input', () => {
-    showVisitData(dateInput.value, searchInput.value); // 传递当前日期和搜索关键字
-  });
+  searchInput.addEventListener(
+    'input',
+    debounce(() => {
+      showVisitData(dateInput.value, searchInput.value);
+    }, 200)
+  );
 
   // 保存设置按钮点击事件
   saveButton.addEventListener('click', saveSettings);
