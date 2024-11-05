@@ -13,7 +13,15 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 
     // Regular expression to check for local network addresses
     const localNetworkRegex =
-      /^(https?:\/\/(?:localhost|127\.0\.0\.1|192\.168\.\d{1,3}\.\d{1,3}|10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(1[6-9]|2[0-9]|3[0-1])\.\d{1,3}\.\d{1,3}))/;
+      /^(https?:\/\/(?:localhost|127\.0\.0.1|192\.168\.\d{1,3}\.\d{1,3}|10\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.(1[6-9]|2[0-9]|3[0-1])\.\d{1,3}\.\d{1,3}))/;
+
+    // Regular expression to filter out the Chrome Web Store URL and any variations
+    const unwantedUrlRegex = /^https:\/\/chromewebstore\.google\.com\/?/;
+
+    // Check if the URL matches the unwanted pattern
+    if (unwantedUrlRegex.test(tab.url)) {
+      return; // Exit if the tab URL matches the unwanted pattern
+    }
 
     // Check if the URL is a search engine, internal Chrome URL, or local network address
     if (
