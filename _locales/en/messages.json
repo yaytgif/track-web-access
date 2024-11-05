@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "Web Visit Statistics"
+    "message": "Track Web Visits - 网页访问统计"
   },
   "extensionDescription": {
     "message": "Track web visit counts, with options to view by date and set maximum storage days."

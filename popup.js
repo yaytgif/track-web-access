@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 设置国际化文本
   document.getElementById('extensionName').textContent =
-    chrome.i18n.getMessage('extensionName');
+    chrome.i18n.getMessage('visitStatistics');
   document.getElementById('selectDateLabel').textContent =
     chrome.i18n.getMessage('selectDate');
   document.getElementById('searchLabel').textContent =

@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "网页访问统计"
+    "message": "Track Web Visits - 网页访问统计"
   },
   "extensionDescription": {
     "message": "统计网页访问次数，支持按日期查看和最大存储天数的配置。"
