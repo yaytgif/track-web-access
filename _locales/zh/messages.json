@@ -1,0 +1,44 @@
+{
+  "extensionName": {
+    "message": "网页访问统计"
+  },
+  "extensionDescription": {
+    "message": "统计网页访问次数，支持按日期查看和最大存储天数的配置。"
+  },
+  "popupTitle": {
+    "message": "查看网站访问统计"
+  },
+  "selectDate": {
+    "message": "选择日期:"
+  },
+  "searchLabel": {
+    "message": "搜索域名:"
+  },
+  "searchPlaceholder": {
+    "message": "输入域名..."
+  },
+  "maxDays": {
+    "message": "最大存储天数:"
+  },
+  "save": {
+    "message": "保存"
+  },
+  "visitStatistics": {
+    "message": "网页访问统计"
+  },
+  "settings": {
+    "message": "设置"
+  },
+  "settingsSaved": {
+    "message": "设置已保存！"
+  },
+  "visits": {
+    "message": "次"
+  },
+  "notificationSavedTitle": {
+    "message": "设置已保存！"
+  },
+  "notificationSavedMessage": {
+    "message": "您的设置已成功保存。"
+  }
+}

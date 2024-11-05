@@ -1,0 +1,44 @@
+{
+  "extensionName": {
+    "message": "Web Visit Statistics"
+  },
+  "extensionDescription": {
+    "message": "Track web visit counts, with options to view by date and set maximum storage days."
+  },
+  "popupTitle": {
+    "message": "View Web Visit Statistics"
+  },
+  "selectDate": {
+    "message": "Select Date:"
+  },
+  "searchLabel": {
+    "message": "Search Domain:"
+  },
+  "searchPlaceholder": {
+    "message": "Enter domain..."
+  },
+  "maxDays": {
+    "message": "Maximum Storage Days:"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "visitStatistics": {
+    "message": "Web Visit Statistics"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "settingsSaved": {
+    "message": "Settings saved!"
+  },
+  "visits": {
+    "message": "visits"
+  },
+  "notificationSavedTitle": {
+    "message": "Settings Saved!"
+  },
+  "notificationSavedMessage": {
+    "message": "Your settings have been successfully saved."
+  }
+}
