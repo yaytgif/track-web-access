@@ -13,6 +13,11 @@ h3 {
   font-size: 1.2em;
   border-bottom: 2px solid #4a90e2;
   padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+h3:hover {
+  color: #357abd; /* Change color on hover */
 }
 
 .section {
@@ -21,6 +26,11 @@ h3 {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.section:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 label {
@@ -38,25 +48,25 @@ input[type='text'] {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
+  transition: border 0.3s ease; /* Smooth border transition */
+}
+
+input[type='date']:focus,
+input[type='number']:focus,
+input[type='text']:focus {
+  border-color: #4a90e2; /* Highlight border color on focus */
 }
 
 #visitList {
   list-style: none;
   padding: 0;
   margin-top: 10px;
-  max-height: 170px; /* 设置最大高度 */
-  overflow-y: auto; /* 超出部分可滚动 */
-}
-
-#visitList {
-  scrollbar-width: none; /* firefox */
-  -ms-overflow-style: none; /* IE 10+ */
-  overflow-x: hidden;
-  overflow-y: auto;
+  max-height: 170px; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 #visitList::-webkit-scrollbar {
-  display: none; /* Chrome Safari */
+  display: none; /* Hide scrollbar */
 }
 
 #visitList li {
@@ -69,6 +79,12 @@ input[type='text'] {
   margin-bottom: 5px;
   font-size: 0.9em;
   color: #555;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth background and transform transition */
+}
+
+#visitList li:hover {
+  background-color: #e0e7ee; /* Change background color on hover */
+  transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
 #save {
@@ -81,8 +97,14 @@ input[type='text'] {
   border-radius: 4px;
   font-size: 1em;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth background and transform transition */
 }
 
 #save:hover {
   background-color: #357abd;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+#save:active {
+  transform: translateY(1px); /* Slight push effect when clicked */
 }

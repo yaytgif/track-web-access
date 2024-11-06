@@ -120,6 +120,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // 保存最大存储天数设置
   function saveSettings() {
     const daysLimit = parseInt(daysLimitInput.value);
+
+    // Check if the daysLimit is a valid number and within the allowed range (1 to 30)
+    if (isNaN(daysLimit) || daysLimit < 1 || daysLimit > 30) {
+      // Optionally, you can alert the user or show an error message
+      alert('Please enter a valid number between 1 and 30 for the days limit.');
+      return; // Exit the function if the input is invalid
+    }
+
+    // Save the valid daysLimit
     chrome.storage.local.set({ daysLimit }, () => {
       sendNotification();
     });

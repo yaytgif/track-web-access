@@ -18,18 +18,18 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     // Regular expression to filter out the Chrome Web Store URL and any variations
     const unwantedUrlRegex = /^https:\/\/chromewebstore\.google\.com\/?/;
 
-    // Check if the URL matches the unwanted pattern
-    if (unwantedUrlRegex.test(tab.url)) {
-      return; // Exit if the tab URL matches the unwanted pattern
-    }
+    // Regular expression to check for file URLs
+    const fileUrlRegex = /^(file:\/\/|http:\/\/file)/;
 
-    // Check if the URL is a search engine, internal Chrome URL, or local network address
+    // Check if the URL matches any unwanted pattern
     if (
+      unwantedUrlRegex.test(tab.url) ||
       searchEngineRegex.test(domain) ||
       chromeInternalRegex.test(tab.url) ||
-      localNetworkRegex.test(tab.url)
+      localNetworkRegex.test(tab.url) ||
+      fileUrlRegex.test(tab.url) // Check for file:// URLs
     ) {
-      return; // Exit if it's a search engine, internal URL, or local address
+      return; // Exit if it matches an unwanted pattern
     }
 
     // Read visit records
